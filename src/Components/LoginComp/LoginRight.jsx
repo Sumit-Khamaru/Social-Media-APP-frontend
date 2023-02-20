@@ -31,9 +31,6 @@ export default function LoginRight() {
     if(isAuth) {
       navigate("/posts");
     }
-    if(!isAuth) {
-      toast.error("Provide Correct Information");
-    }
   },[isAuth, message, navigate])
 
   return (
