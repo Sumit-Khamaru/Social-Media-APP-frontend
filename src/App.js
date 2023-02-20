@@ -12,6 +12,7 @@ import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { themeSettings } from './Components/theme';
 import ProfilePage from "./Pages/ProfilePage";
 import { getAllUsersData } from "./store/GetAllUsersSlice";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   const { isAuth } = useSelector((state) => state.user);
@@ -34,6 +35,7 @@ function App() {
           <Route path="/update/profile" element={isAuth? <EditProfile /> : <Navigate to='/'/>}/>
           <Route path="/update/password" element={isAuth? <UpdatePassword /> : <Navigate to='/'/>}/>
           <Route path="/user/profile/:id" element={isAuth? <UserPage /> : <Navigate to='/'/>}/>
+          <Route path="*" element={<ErrorPage />}/>
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
