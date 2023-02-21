@@ -1,4 +1,5 @@
-export const host = 'http://localhost:4001';
+// export const host = 'http://localhost:4001';
+export const host = 'https://socialpedia-backend-bsr4.onrender.com';
 
 export const Login = `${host}/api/v1/login`;
 export const Register = `${host}/api/v1/register`;
