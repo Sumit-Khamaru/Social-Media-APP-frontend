@@ -8,7 +8,7 @@ export default function Login() {
   // console.log(isAuth);
   const theme = useTheme();
   return (
-    <Box width="100%" backgroundColor={theme.palette.background.alt} p="1rem 6%" textAlign="center" display="flex" justifyContent="center" flexDirection="column" alignItems="center">
+    <Box width="100%" backgroundColor={theme.palette.background.alt}  textAlign="center" display="flex" justifyContent="center" flexDirection="column" alignItems="center">
       <Box>
         <Typography 
         fontWeight="bold"
