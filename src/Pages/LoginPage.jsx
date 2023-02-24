@@ -23,14 +23,13 @@ export default function LoginPage() {
   const { isAuth, message } = useSelector((state) => state.user);
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    console.log(loginData);
     dispatch(postLoginData(loginData));
   };
   useEffect(() => {
     if (isAuth) {
       navigate("/posts");
     }
-  }, [navigate])
+  }, []) // eslint-disable-next-line react-hooks/exhaustive-deps
 
   return (
     <div style={{ width: "100%", margin: "0 auto", fontFamily: "'Poppins', sans-serif" }}>
