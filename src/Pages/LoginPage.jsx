@@ -4,7 +4,7 @@ import "../Components/LoginComp/Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import Login from '../Components/LoginComp/Login'
 import { useDispatch, useSelector } from 'react-redux';
-import { postLoginData } from '../store/userSlice';
+import { postLoginData, loadUserData } from '../store/userSlice';
 import { IconButton } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 export default function LoginPage() {
@@ -24,6 +24,7 @@ export default function LoginPage() {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(postLoginData(loginData));
+    dispatch(loadUserData());
   };
   useEffect(() => {
     if (isAuth) {
