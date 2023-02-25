@@ -21,9 +21,9 @@ export default function LoginPage() {
   };
 
   const { isAuth, message } = useSelector((state) => state.user);
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit =  async (e) => {
     e.preventDefault();
-    dispatch(postLoginData(loginData));
+    await dispatch(postLoginData(loginData));
     dispatch(loadUserData());
   };
   useEffect(() => {
