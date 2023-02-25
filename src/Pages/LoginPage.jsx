@@ -29,7 +29,7 @@ export default function LoginPage() {
     if (isAuth) {
       navigate("/posts");
     }
-  }, []) // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuth]) 
 
   return (
     <div style={{ width: "100%", margin: "0 auto", fontFamily: "'Poppins', sans-serif" }}>
