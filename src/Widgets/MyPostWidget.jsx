@@ -86,7 +86,7 @@ export default function MyPostWidget() {
         >
           <input type="file" className='image_upload__file' accept="image/*" id="file" onChange={handleImageChange} />
           <label htmlFor="file" className='btn-1'>Upload File</label>
-          <span>{uploadFileName}</span>
+          <span className='myPostUpload__imageFileName'>{uploadFileName}</span>
         </Box>
 
 
