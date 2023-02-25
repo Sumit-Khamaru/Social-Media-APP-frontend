@@ -15,6 +15,7 @@ import PostsWidget from "../Widgets/PostsWidget";
 import AdvertWidget from "../Widgets/AdvertWidget";
 import FriendListWidget from "../Widgets/FriendListWidget";
 import { getAllMyPosts } from "../store/MyPostSlice";
+import LoadingPage from "./LoadingPage";
 
 export default function MainPage() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export default function MainPage() {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   return status === "loading" ? (
-    <h1>Loading......</h1>
+    <LoadingPage/>
   ) : (
     <Box>
       <Navbar />

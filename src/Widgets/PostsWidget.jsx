@@ -31,7 +31,7 @@ export default function PostsWidget() {
                 isProfile={false}
               />
             ))
-            : <Typography>Follow User to See the Posts</Typography>}
+            : null}
   
           {myposts && myposts.length > 0
             ? myposts.map((post) => (
@@ -49,7 +49,7 @@ export default function PostsWidget() {
                 isProfile={true}
               />
             ))
-            : <Typography>No Posts Yet</Typography>}
+            : <Typography>You haven't posted anything yet, start sharing your moments with your followers!</Typography>}
         </>)
     )
 }
