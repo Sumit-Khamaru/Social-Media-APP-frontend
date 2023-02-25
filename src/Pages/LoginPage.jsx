@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import "../Components/LoginComp/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import Login from '../Components/LoginComp/Login'
 import { useDispatch, useSelector } from 'react-redux';
 import { postLoginData, loadUserData } from '../store/userSlice';
 import { IconButton } from '@mui/material';

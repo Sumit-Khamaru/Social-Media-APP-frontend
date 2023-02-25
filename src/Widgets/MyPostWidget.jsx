@@ -9,6 +9,7 @@ import {
   MicOutlined,
   MoreHorizOutlined,
 } from "@mui/icons-material";
+import './MyPostsWidget.css'
 import {
   Box,
   Divider,
@@ -82,7 +83,8 @@ export default function MyPostWidget() {
           mt="1rem"
           p="1rem"
         >
-          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <input type="file" accept="image/*" id="file" onChange={handleImageChange} />
+          <label htmlFor="file" className='btn-1'>Upload File</label>
         </Box>
 
 

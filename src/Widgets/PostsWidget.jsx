@@ -49,7 +49,7 @@ export default function PostsWidget() {
                 isProfile={true}
               />
             ))
-            : <Typography variant='h4' marginTop="2rem">You haven't posted anything yet, start sharing your moments with your followers!</Typography>}
+            : <Typography variant='h4' marginTop="2rem" color="#d7d7d7">You haven't posted anything yet, start sharing your moments with your followers!</Typography>}
         </>)
     )
 }
