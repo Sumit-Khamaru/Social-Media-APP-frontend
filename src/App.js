@@ -25,22 +25,21 @@ function App() {
     dispatch(getAllUsersData());
   }, [dispatch]);
   return (
-    // <BrowserRouter>
-    //   <ThemeProvider theme={theme}>
-    //     <CssBaseline />
-    //     <Routes>
-    //     <Route path="/" element={isAuth? <Navigate to='/posts' /> : <LoginPage />}/>
-    //       <Route path="/posts" element={isAuth? <MainPage /> : <Navigate to='/'/>}/>
-    //       <Route path="/profile/:id" element={isAuth? <ProfilePage /> : <Navigate to='/' />}/>
-    //       <Route path="/register" element={isAuth? <Navigate to='/posts' /> : <RegisterPage />}/>
-    //       <Route path="/update/profile" element={isAuth? <EditProfile /> : <Navigate to='/'/>}/>
-    //       <Route path="/update/password" element={isAuth? <UpdatePassword /> : <Navigate to='/'/>}/>
-    //       <Route path="/user/profile/:id" element={isAuth? <UserPage /> : <Navigate to='/'/>}/>
-    //       <Route path="*" element={<ErrorPage />}/>
-    //     </Routes>
-    //   </ThemeProvider>
-    // </BrowserRouter>
-    <LoadingPage />
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Routes>
+        <Route path="/" element={isAuth? <Navigate to='/posts' /> : <LoginPage />}/>
+          <Route path="/posts" element={isAuth? <MainPage /> : <Navigate to='/'/>}/>
+          <Route path="/profile/:id" element={isAuth? <ProfilePage /> : <Navigate to='/' />}/>
+          <Route path="/register" element={isAuth? <Navigate to='/posts' /> : <RegisterPage />}/>
+          <Route path="/update/profile" element={isAuth? <EditProfile /> : <Navigate to='/'/>}/>
+          <Route path="/update/password" element={isAuth? <UpdatePassword /> : <Navigate to='/'/>}/>
+          <Route path="/user/profile/:id" element={isAuth? <UserPage /> : <Navigate to='/'/>}/>
+          <Route path="*" element={<ErrorPage />}/>
+        </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
 
   );
 }
