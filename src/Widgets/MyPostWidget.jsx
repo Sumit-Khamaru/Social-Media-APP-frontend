@@ -35,12 +35,13 @@ export default function MyPostWidget() {
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
-  const [post, setPost] = useState("");
+  const [uploadFileName, setUploadFileName] = useState("");
   const [image, setImage] = useState(null);
   const [caption, setCaption] = useState("");
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    setUploadFileName(file.name);
     const Reader = new FileReader();
     Reader.readAsDataURL(file);
     Reader.onload = (e) => {
@@ -85,7 +86,7 @@ export default function MyPostWidget() {
         >
           <input type="file" className='image_upload__file' accept="image/*" id="file" onChange={handleImageChange} />
           <label htmlFor="file" className='btn-1'>Upload File</label>
-          <img src={image} alt="post_image" />
+          <span>{uploadFileName}</span>
         </Box>
 
 
