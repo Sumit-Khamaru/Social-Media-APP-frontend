@@ -23,7 +23,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import FlexBetween from './FlexBetween';
-import { logoutUserData } from '../store/userSlice';
+import { loadUserData, logoutUserData } from '../store/userSlice';
 import { searchUsersData } from '../store/GetAllUsersSlice';
 import ListItems from './ListItems';
 export default function Navbar() {
@@ -44,7 +44,10 @@ export default function Navbar() {
     const handleUpdateProfile = () => {
         navigate("/update/profile");
     }
-
+    const handleLogout = async() => {
+        await dispatch(logoutUserData());
+        dispatch(loadUserData());
+    }
     const handleSearch = () => {
         // console.log(search);
         dispatch(searchUsersData({ name }));
@@ -121,7 +124,7 @@ export default function Navbar() {
                                 <Typography>{userName}</Typography>
                             </MenuItem>
                             <MenuItem onClick={handleUpdateProfile} >Update Profile</MenuItem>
-                            <MenuItem onClick={() => dispatch(logoutUserData())} >Log Out</MenuItem>
+                            <MenuItem onClick={handleLogout} >Log Out</MenuItem>
                         </Select>
                     </FormControl>
                 </FlexBetween>
@@ -197,7 +200,7 @@ export default function Navbar() {
                                     <Typography>{userName}</Typography>
                                 </MenuItem>
                                 <MenuItem onClick={handleUpdateProfile} >Update Profile</MenuItem>
-                                <MenuItem onClick={() => dispatch(logoutUserData())}>
+                                <MenuItem onClick={handleLogout}>
                                     Log Out
                                 </MenuItem>
                             </Select>
