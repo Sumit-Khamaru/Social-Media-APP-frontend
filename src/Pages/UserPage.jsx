@@ -20,6 +20,7 @@ import {  Divider, useTheme } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import UserImage from '../Components/UserImage';
 import Friend from '../Components/Friend';
+import LoadingPage from './LoadingPage';
 export default function ProfilePage() {
   const navigate = useNavigate();
   const { palette } = useTheme();
@@ -28,7 +29,7 @@ export default function ProfilePage() {
   const main = palette.neutral.main;
   const {status, posts} = useSelector((state) => state.userposts);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-  return (status === "loading" ? (<h1>Loading......</h1>) : (
+  return (status === "loading" ? (<LoadingPage />) : (
     <Box>
       <Navbar />
       <Box

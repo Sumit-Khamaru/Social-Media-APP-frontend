@@ -177,10 +177,12 @@
   border: none;
   background: 0 0;
 }
+
 .wrap_login100_formbtn:hover {
   transform: scale(1.05);
   opacity: 1;
 }
+
 .sign___up {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -238,9 +240,30 @@
   text-transform: uppercase;
   text-decoration: none;
   background-color: transparent;
-  transition:  all .5s;
+  transition: all .5s;
 }
 
-.goto__sigup a:hover{
+.goto__sigup a:hover {
   transform: translateY(-50%) scale(.9);
+}
+
+
+
+
+.demo__info {
+  background: #262626;
+  padding: 0.25rem 2rem;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  z-index: 99999;
+  white-space: nowrap;
+}
+
+.demo__info span {
+  margin: 0;
+  display: inline-block;
 }

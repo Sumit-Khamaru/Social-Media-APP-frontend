@@ -131,6 +131,16 @@ export default function LoginPage() {
             </div>
           </form>
         </div>
+        <div className="demo__info">
+          <span style={{marginRight: "5px"}}>email : 
+            <strong style={{marginLeft: "5px"}}>anna@gmail.com</strong>
+          </span>
+          <span style={{marginRight: "5px"}}>||</span>
+          <span>
+            password :
+            <strong style={{marginLeft: "5px"}}>12345678</strong>
+          </span>
+        </div>
       </div>
     </div>
   )
