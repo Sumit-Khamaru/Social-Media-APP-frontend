@@ -9,7 +9,7 @@ import {
   MicOutlined,
   MoreHorizOutlined,
 } from "@mui/icons-material";
-import './MyPostsWidget.css'
+import './MyPostWidget.css'
 import {
   Box,
   Divider,
