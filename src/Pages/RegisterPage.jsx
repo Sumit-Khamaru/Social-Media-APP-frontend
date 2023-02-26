@@ -49,7 +49,7 @@ export default function RegisterPage() {
     if (isAuth) {
       navigate("/posts");
     }
-  }, [isAuth, navigate])
+  }, [isAuth])
   return (
     <div style={{ width: "100%", margin: "0 auto", fontFamily: "'Poppins', sans-serif" }}>
       <div className="container_login100" style={{ backgroundImage: "url('https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg')" }}>
