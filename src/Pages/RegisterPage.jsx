@@ -34,13 +34,13 @@ export default function RegisterPage() {
       }
     }
   };
-  const handleSubmitRegisterForm = (e) => {
+  const handleSubmitRegisterForm = async (e) => {
     e.preventDefault();
     const { name, email, password, confirmPassword } = regFormData;
     if (password !== confirmPassword) {
       alert("password and confirmPassword doesn't match");
     } else {
-      dispatch(postRegisterData({ name, email, password, avatar }));
+      await dispatch(postRegisterData({ name, email, password, avatar }));
       dispatch(loadUserData());
     }
   };
