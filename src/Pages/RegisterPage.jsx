@@ -54,7 +54,7 @@ export default function RegisterPage() {
     <div style={{ width: "100%", margin: "0 auto", fontFamily: "'Poppins', sans-serif" }}>
       <div className="container_login100" style={{ backgroundImage: "url('https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg')" }}>
         <div className="wrap_login100">
-          <form className='login100_form validate_form' onSubmit={handleImageChange}>
+          <form className='login100_form validate_form' onSubmit={handleSubmitRegisterForm}>
             {/* IMAGE___UPLOAD */}
             <RegisterUploadUserImage src={avatar} onChange={handleImageChange} />
             {/* IMAGE___UPLOAD */}

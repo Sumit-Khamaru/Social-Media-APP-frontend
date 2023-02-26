@@ -30,6 +30,7 @@ import UserImage from '../Components/UserImage';
 
 export default function MyPostWidget() {
   const {user } = useSelector((state) => state.user);
+  const {status:createPostLoading } = useSelector((state) => state.getlikes);
   const dispatch = useDispatch();
   const { palette } = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
@@ -58,7 +59,7 @@ export default function MyPostWidget() {
     await dispatch(createNewPostData(postData));
     dispatch(getAllMyPosts());
     dispatch(loadUserData());
-    setCaption("");
+    e.target.reset();
   };
   return (
     <WidgetWrapper>
@@ -127,7 +128,7 @@ export default function MyPostWidget() {
         )}
 
         <Button
-          disabled={!caption}
+          disabled={!caption && createPostLoading==='loading' }
           onClick={submitHandler}
           sx={{
             color: palette.background.alt,
