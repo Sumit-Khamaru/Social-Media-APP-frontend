@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../Components/RegisterComp/Register.css';
 import { IconButton } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { postRegisterData } from '../store/userSlice';
+import { loadUserData, postRegisterData } from '../store/userSlice';
 import UploadImage from '../Components/UploadImage';
 import RegisterUploadUserImage from '../Components/RegisterComp/RegisterUploadUserImage';
 export default function RegisterPage() {
@@ -41,6 +41,7 @@ export default function RegisterPage() {
       alert("password and confirmPassword doesn't match");
     } else {
       dispatch(postRegisterData({ name, email, password, avatar }));
+      dispatch(loadUserData());
     }
   };
 
