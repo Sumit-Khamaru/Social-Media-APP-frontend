@@ -40,8 +40,14 @@ export default function RegisterPage() {
     if (password !== confirmPassword) {
       alert("password and confirmPassword doesn't match");
     } else {
-      await dispatch(postRegisterData({ name, email, password, avatar }));
-      dispatch(loadUserData());
+      try {
+        await dispatch(postRegisterData({ name, email, password, avatar }));
+        dispatch(loadUserData());
+      } catch (error) {
+        alert(error);
+      }
+
+
     }
   };
 
