@@ -38,7 +38,7 @@ export default function LoginPage() {
           <form className='login100_form validate_form' onSubmit={handleOnSubmit}>
             <span className="login-100_form_title">Login To <span style={{ color: '#615dfa' }}> Socialpedia</span></span>
             <div className="wrap_input100 validate_input" dataValidate="Email is required" style={{ marginBottom: '1.5rem' }}>
-              <span className="label_input100">Username</span>
+              <span className="label_input100">EmailAddress</span>
               <input type="email"
                 value={loginData.email}
                 onChange={(e) =>

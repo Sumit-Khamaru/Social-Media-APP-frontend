@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Avatar from '@mui/material/Avatar';
 import { postRegisterData } from "../../store/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -57,7 +56,7 @@ export default function RegisterRight() {
       <Typography variant="h3">Welcome</Typography>
       <form className="register-form" onSubmit={handleSubmitRegisterForm}>
 
-        <UploadImage src={avatar} onChange={handleImageChange} />
+        <UploadImage src={avatar} onChange={handleImageChange}  />
 
 
         <div className="material-textfield ">
